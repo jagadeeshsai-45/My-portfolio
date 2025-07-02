@@ -1,0 +1,170 @@
+.education {
+    text-align: center;
+  padding: 60px 20px;
+  background: #0b0c10;
+  color: white;
+  }
+  
+  .education-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .education-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #00ffff;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  /* Timeline Container */
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  /* Timeline Line */
+  .education-container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background: #00ffff;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  /* Education Cards */
+  .education-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid #00ffff;
+    backdrop-filter: blur(10px);
+  }
+  
+  .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.4);
+  }
+  
+  /* Graduation Icon */
+  .edu-icon {
+    font-size: 50px;
+    color: #00ffff;
+    margin-bottom: 10px;
+  }
+  
+  /* Degree Title */
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Institution Name */
+  .edu-institution {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ddd;
+  }
+  
+  /* Year */
+  .edu-year {
+    font-style: italic;
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 5px;
+  }
+  
+  /* CGPA & Percentage Tag */
+  .edu-score {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #00ffff;
+    color: #0b0c10;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .education-card:hover .edu-score {
+    background: #0099cc;
+  }
+  
+  /* Timeline Effect */
+  .education-card {
+    width: 40%;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  /* Left & Right Alignment */
+  .education-card:nth-child(odd) {
+    align-self: flex-start;
+    transform: translateX(-30px);
+  }
+  
+  .education-card:nth-child(even) {
+    align-self: flex-end;
+    transform: translateX(30px);
+  }
+  
+  /* Connector Circles */
+  .education-card::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #00ffff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid #0b0c10;
+  }
+  
+  .education-card:nth-child(odd)::before {
+    right: -10px;
+  }
+  
+  .education-card:nth-child(even)::before {
+    left: -10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .education-container::before {
+      left: 20px;
+    }
+  
+    .education-card {
+      width: 90%;
+      transform: none !important;
+    }
+  
+    .education-card::before {
+      left: -10px !important;
+      right: auto;
+    }
+  }
+  
